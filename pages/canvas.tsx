@@ -5,13 +5,13 @@ const CanvasAnimationPage = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const canvas = canvasRef.current!;
         if (!canvas) {
             console.error("Canvas element not found");
             return;
         }
 
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d')!;
         if (!ctx) {
             console.error("Failed to get canvas context");
             return;
